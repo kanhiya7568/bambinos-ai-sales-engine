@@ -1,0 +1,258 @@
+[
+  {
+    "lead": "LEAD-811",
+    "owner": "Pooja M***",
+    "type": "DUPLICATE_LEAD",
+    "severity": "P2",
+    "detail": "duplicates LEAD-801 (same user_id/student_id/mobile); owners Rohan S*** vs Pooja M***",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-801",
+    "owner": "Rohan S***",
+    "type": "LINK_OPENED_NOT_PAID",
+    "severity": "P1",
+    "detail": "order 99401: link opened twice, unpaid; strong buying signal",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-801",
+    "owner": "Rohan S***",
+    "type": "FOLLOWUP_OVERDUE",
+    "severity": "P1",
+    "detail": "follow-up due 2026-11-03 11:00:00 IST; no activity logged since",
+    "hours": 14.5
+  },
+  {
+    "lead": "LEAD-801",
+    "owner": "Rohan S***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Call back tomorrow' / note 'will ask husband and tell tomorrow' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-802",
+    "owner": "Sneha V***",
+    "type": "PRICE_MISMATCH_VS_CATALOG",
+    "severity": "P2",
+    "detail": "order 99402: order standard_amount 12000 AED vs catalog 1200 AED (10x)",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-802",
+    "owner": "Sneha V***",
+    "type": "NO_FOLLOWUP_SCHEDULED",
+    "severity": "P1",
+    "detail": "open stage 'Follow_Up_Cold' with next_followup_at NULL",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-802",
+    "owner": "Sneha V***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Price issue' / note 'price high thinking' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-803",
+    "owner": "Amitabh R***",
+    "type": "DISCOUNT_ANOMALY",
+    "severity": "P0",
+    "detail": "order 99403: discount 4000 INR = 42.1% of catalog fee vs cap 10% (limit 950 INR)",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-803",
+    "owner": "Amitabh R***",
+    "type": "UNAUTHORIZED_LINK",
+    "severity": "P0",
+    "detail": "order 99403: payment plan type is 'Unauthorized_Custom_Link'",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-803",
+    "owner": "Amitabh R***",
+    "type": "POLICY_RULE_MISMATCH",
+    "severity": "P2",
+    "detail": "order 99403: gateway rule says 15% cap, catalog policy says 10%",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-803",
+    "owner": "Amitabh R***",
+    "type": "FOLLOWUP_OVERDUE",
+    "severity": "P1",
+    "detail": "follow-up due 2026-11-03 18:00:00 IST; no activity logged since",
+    "hours": 7.5
+  },
+  {
+    "lead": "LEAD-803",
+    "owner": "Amitabh R***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Interested' / note 'good call sent payment link will pay today' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-804",
+    "owner": "Rohan S***",
+    "type": "PAID_BUT_CRM_OPEN",
+    "severity": "P0",
+    "detail": "order 99404 paid 2026-11-03 11:40:12; CRM stage still 'Payment_Link_Sent', next follow-up 2026-11-03 20:00:00 would nag a paying parent",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-805",
+    "owner": "Pooja M***",
+    "type": "PAYMENT_FAILED_UNRECOVERED",
+    "severity": "P0",
+    "detail": "order 99405 Bank_OTP_Timeout_On_UPI_Mandate; no recovery logged 5 h later",
+    "hours": 4.8
+  },
+  {
+    "lead": "LEAD-805",
+    "owner": "Pooja M***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Thinking' / note 'comparing with planetspark and school exam going on' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-806",
+    "owner": "Karan K***",
+    "type": "NO_FOLLOWUP_SCHEDULED",
+    "severity": "P1",
+    "detail": "open stage 'Follow_Up_Cold' with next_followup_at NULL",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-807",
+    "owner": "Sneha V***",
+    "type": "UNCALLED_DEMO",
+    "severity": "P1",
+    "detail": "demo ended 2026-11-02 15:30:00 IST; engagement 5/5; no call after 34 h (SLA 2 h)",
+    "hours": 34.0
+  },
+  {
+    "lead": "LEAD-807",
+    "owner": "Sneha V***",
+    "type": "NO_FOLLOWUP_SCHEDULED",
+    "severity": "P1",
+    "detail": "open stage 'Demo_Completed_Uncalled' with next_followup_at NULL",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-808",
+    "owner": "Amitabh R***",
+    "type": "NO_FOLLOWUP_SCHEDULED",
+    "severity": "P1",
+    "detail": "open stage 'Follow_Up_Warm' with next_followup_at NULL",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-808",
+    "owner": "Amitabh R***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Busy' / note 'ok' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-808",
+    "owner": "Amitabh R***",
+    "type": "CALL_RECORD_MISSING",
+    "severity": "P2",
+    "detail": "CRM shows a call at 2026-11-02 20:10:00 but no recording/transcript is in the call log",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-808",
+    "owner": "Amitabh R***",
+    "type": "CATALOG_GAP",
+    "severity": "P1",
+    "detail": "class_id 108 ('Young Communicators GCC Track') is not in the reference pricing/policy table",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-809",
+    "owner": "Rohan S***",
+    "type": "CATALOG_GAP",
+    "severity": "P2",
+    "detail": "order 99409: No GBP fee for class 205 in the catalog; amount 210 GBP cannot be verified",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-809",
+    "owner": "Rohan S***",
+    "type": "PAYMENT_FAILED_UNRECOVERED",
+    "severity": "P0",
+    "detail": "order 99409 3DS_Authentication_Declined_By_Issuer; no recovery logged 6 h later",
+    "hours": 5.8
+  },
+  {
+    "lead": "LEAD-809",
+    "owner": "Rohan S***",
+    "type": "FOLLOWUP_OVERDUE",
+    "severity": "P1",
+    "detail": "follow-up due 2026-11-03 19:00:00 GMT; no activity logged since",
+    "hours": 1.0
+  },
+  {
+    "lead": "LEAD-809",
+    "owner": "Rohan S***",
+    "type": "CALL_RECORD_MISSING",
+    "severity": "P2",
+    "detail": "CRM shows a call at 2026-11-03 14:00:00 but no recording/transcript is in the call log",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-810",
+    "owner": "Karan K***",
+    "type": "FOLLOWUP_BEFORE_LAST_CALL",
+    "severity": "P2",
+    "detail": "next_followup_at 2026-11-01 10:00:00 is earlier than last_call_at 2026-11-02 12:30:00: stale/invalid",
+    "hours": 63.5
+  },
+  {
+    "lead": "LEAD-810",
+    "owner": "Karan K***",
+    "type": "LAZY_DISPOSITION",
+    "severity": "P2",
+    "detail": "disposition 'Call back' / note 'cb' carries no usable intent or next step",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-810",
+    "owner": "Karan K***",
+    "type": "CALL_RECORD_MISSING",
+    "severity": "P2",
+    "detail": "CRM shows a call at 2026-11-02 12:30:00 but no recording/transcript is in the call log",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-812",
+    "owner": "Sneha V***",
+    "type": "UNCALLED_DEMO",
+    "severity": "P1",
+    "detail": "demo ended 2026-11-03 06:30:00 CST; engagement 5/5; no call after 8 h (SLA 2 h)",
+    "hours": 7.5
+  },
+  {
+    "lead": "LEAD-812",
+    "owner": "Sneha V***",
+    "type": "NO_FOLLOWUP_SCHEDULED",
+    "severity": "P1",
+    "detail": "open stage 'Demo_Completed_Uncalled' with next_followup_at NULL",
+    "hours": null
+  },
+  {
+    "lead": "LEAD-812",
+    "owner": "Sneha V***",
+    "type": "DATA_QUALITY_NON_ASCII",
+    "severity": "P2",
+    "detail": "look-alike letters in name 'Ri***i Ме***a': CYRILLIC CAPITAL LETTER EM, CYRILLIC SMALL LETTER IE",
+    "hours": null
+  }
+]

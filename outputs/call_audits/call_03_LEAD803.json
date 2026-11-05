@@ -1,0 +1,218 @@
+{
+  "call_id": 7003,
+  "lead_code": "LEAD-803",
+  "counsellor": "Amitabh R***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[00:06]",
+          "speaker": "COUNSELLOR",
+          "quote": "Vihaan has been shortlisted for our super-exclusive Elite Phonics Accelerator batch!"
+        }
+      ],
+      "why": "Opens with an unverified 'exclusive batch' hook, nothing about the child."
+    },
+    "D2_discovery": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[02:08]",
+          "speaker": "COUNSELLOR",
+          "quote": "forget about screen time and forget about \"train\" or \"truck\"! That is nothing!"
+        }
+      ],
+      "why": "Two direct parent concerns (screen time, train/truck) are dismissed."
+    },
+    "D3_pitch_before_price": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[00:06]",
+          "speaker": "COUNSELLOR",
+          "quote": "monologues non-stop for 95 seconds about company awards"
+        }
+      ],
+      "why": "A 95-second company monologue; no curriculum or demo evidence was shared."
+    },
+    "D4_objection_handling": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[02:35]",
+          "speaker": "PARENT",
+          "quote": "That sounds like a fake sales promise."
+        }
+      ],
+      "why": "Answers doubts with guarantees, threats and an invented discount."
+    },
+    "D5_honest_urgency_close": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "you must do the UPI payment in the next 5 minutes while staying on this call, otherwise our system will permanently blacklist Vihaan's student ID forever!"
+        }
+      ],
+      "why": "Coercive 5-minute deadline with a threat against a child's account."
+    },
+    "D6_listening_balance": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[03:54]",
+          "speaker": "PARENT",
+          "quote": "I am cutting the call right now. Do not call me again!"
+        }
+      ],
+      "why": "84% rep talk time; parent's questions overridden."
+    },
+    "D7_compliance_accuracy": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "Because I hacked my manager's VIP scholarship quota just for you, sir"
+        }
+      ],
+      "why": "Six critical compliance breaches in 12 minutes."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": false,
+    "revoked_credit": []
+  },
+  "compliance_flags": [
+    {
+      "id": "CR-01",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[02:08]",
+          "speaker": "COUNSELLOR",
+          "quote": "my personal 100% iron-clad guarantee that in just 30 days Vihaan will read thick 300-page Harry Potter novels by himself"
+        },
+        {
+          "ts": "[02:08]",
+          "speaker": "COUNSELLOR",
+          "quote": "he will come Rank 1 in his school English exam! 100% guaranteed in writing by me!"
+        }
+      ],
+      "policy_reference": "class 101 forbidden: NEVER promise specific school exam ranks (e.g., Rank 1 in 30 days)",
+      "why": "Written outcome guarantee that the company cannot honour; a possible consumer-protection exposure."
+    },
+    {
+      "id": "CR-02",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[03:16]",
+          "speaker": "PARENT",
+          "quote": "why is the link you just sent me on WhatsApp showing Rs. 5,500 when you said the fee is Rs. 9,500?"
+        },
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "flat Rs. 4,000 off!"
+        }
+      ],
+      "policy_reference": "class 101 max rep discount 10% (Rs. 950); order 99403 net 5,500 on standard 9,500 = 42.1% off, status Unauthorized_Custom_Link",
+      "why": "42.1% discount is 4.2x the cap; custom link created outside the catalog."
+    },
+    {
+      "id": "CR-03",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[02:54]",
+          "speaker": "COUNSELLOR",
+          "quote": "Sir, between you and me, off the record, don't look at the website policy"
+        },
+        {
+          "ts": "[02:54]",
+          "speaker": "COUNSELLOR",
+          "quote": "I am giving you a 100% no-questions-asked full refund anytime in 6 months!"
+        }
+      ],
+      "policy_reference": "Refund: 100% within first 14 days (up to 4 classes attended), pro-rata thereafter; class 101 forbids the 6-month promise",
+      "why": "Refund promise contradicts the official policy and was framed as off the record."
+    },
+    {
+      "id": "CR-04",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "you must do the UPI payment in the next 5 minutes while staying on this call, otherwise our system will permanently blacklist Vihaan's student ID forever!"
+        }
+      ],
+      "policy_reference": "class 104 forbidden: NEVER threaten that a child will be blacklisted if payment is not made in 5 minutes (applied company-wide)",
+      "why": "Threat against a 7-year-old's account to force an immediate payment."
+    },
+    {
+      "id": "CR-05",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "I will even make it a 1-on-1 private class for the price of a group batch!"
+        },
+        {
+          "ts": "[00:06]",
+          "speaker": "COUNSELLOR",
+          "quote": "Vihaan has been shortlisted for our super-exclusive Elite Phonics Accelerator batch!"
+        }
+      ],
+      "policy_reference": "class 104 forbidden: NEVER claim batches are 1-on-1 when selling a 6-kid group plan (applied company-wide); no 'Elite Accelerator' batch in the catalog",
+      "why": "Misrepresents the product format and invents exclusivity."
+    },
+    {
+      "id": "CR-07",
+      "severity": "CRITICAL",
+      "evidence": [
+        {
+          "ts": "[03:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "Because I hacked my manager's VIP scholarship quota just for you, sir"
+        }
+      ],
+      "policy_reference": "Discount above cap requires a Team Lead approval code",
+      "why": "Rep states in front of a customer that an approval control was bypassed."
+    }
+  ],
+  "unverified_claims": [
+    {
+      "ts": "[00:06]",
+      "claim": "50,000+ kids across 25 countries; proprietary AI tools; celebrity mentors (not in claims registry)"
+    }
+  ],
+  "compliance_gate": "CRITICAL_HOLD",
+  "escalation": {
+    "required": true,
+    "sla_minutes": 5,
+    "route_to": "Head of Sales + Compliance",
+    "reason": "Six critical flags, written guarantee, 42.1% unauthorized discount, threat against a child, parent requested no further contact."
+  },
+  "post_call_hygiene": [
+    "Rep logged 'Interested / good call sent payment link will pay today': contradicts the call (parent ended it and said not to call again). Treat as an inaccurate CRM record.",
+    "Order 99403 (Rs. 5,500, Unauthorized_Custom_Link) must be voided so the parent cannot pay under false promises.",
+    "Parent said 'Do not call me again': set phone DNC immediately; any recovery contact is manager-only and in writing.",
+    "Gateway text says cap is 15% but the catalog policy says 10%: reconcile the two rules.",
+    "Same rep also owns LEAD-808 (a call with no recording in the dataset): review that call."
+  ],
+  "headline": "Critical compliance hold: written Rank-1 guarantee, 42.1% unauthorized discount, 6-month refund promise, blacklist threat.",
+  "coaching": {
+    "route": "MANAGER",
+    "focus_skill": "n/a (compliance routed to manager)",
+    "note": null,
+    "manager_summary": "Six critical flags (guarantee, 42.1% discount, 6-month refund, blacklist threat, 1-on-1 claim, control bypass). Void order 99403. Parent asked for no further calls. Hold rep's new outbound until review."
+  },
+  "raw_score": 2.0,
+  "total_score": 2.0,
+  "capped": false
+}

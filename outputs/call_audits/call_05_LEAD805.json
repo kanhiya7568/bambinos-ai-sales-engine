@@ -1,0 +1,169 @@
+{
+  "call_id": 7005,
+  "lead_code": "LEAD-805",
+  "counsellor": "Pooja M***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[00:10]",
+          "speaker": "COUNSELLOR",
+          "quote": "Kaisa laga sir aapko Kabir ka participation aaj?"
+        },
+        {
+          "ts": "[00:46]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ms. Rhea ne bhi apni report mein yahi likha hai ki Kabir ki grammar strong hai"
+        }
+      ],
+      "why": "Opens on the demo and ties praise to the teacher's report in the parent's own language."
+    },
+    "D2_discovery": {
+      "score": 3,
+      "evidence": [
+        {
+          "ts": "[00:24]",
+          "speaker": "PARENT",
+          "quote": "woh dimaag mein Hindi se English translate karta hai aur phir \"umm... matlab...\" karke atak jaata hai."
+        }
+      ],
+      "why": "Parent's translate-in-head pain is reflected with the teacher's note; the mother's role in the decision ('mummy bol rahi hain') is not explored."
+    },
+    "D3_pitch_before_price": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[00:46]",
+          "speaker": "COUNSELLOR",
+          "quote": "toh Kabir ne \"Should homework be banned?\" topic par poore 60 seconds bina ek bhi \"umm\" bole speech di!"
+        }
+      ],
+      "why": "Uses the PEEL success from the demo and the peer-audience logic; fee given only when the parent asks."
+    },
+    "D4_objection_handling": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[01:40]",
+          "speaker": "COUNSELLOR",
+          "quote": "kyunki stage fear tabhi jaata hai jab bacha 5-6 peers ke saamne bolna seekhe"
+        },
+        {
+          "ts": "[02:10]",
+          "speaker": "PARENT",
+          "quote": "akele teacher ke saamne bolne se stage fear nahi khulega"
+        }
+      ],
+      "why": "Reframes 1-on-1 competitor with peer-audience logic; the parent concedes. Exam pause claim needs verification."
+    },
+    "D5_honest_urgency_close": {
+      "score": 3,
+      "evidence": [
+        {
+          "ts": "[03:00]",
+          "speaker": "COUNSELLOR",
+          "quote": "aaj sirf 50% yaani Rs. 5,400 dekar Kabir ki Ms. Rhea ke batch mein seat lock kar lijiye"
+        },
+        {
+          "ts": "[03:28]",
+          "speaker": "PARENT",
+          "quote": "main raat ko dinner ke baad UPI se kar dunga"
+        }
+      ],
+      "why": "Installment plan and link sent; parent says he will pay after dinner but no call-back time or exam-start date is fixed."
+    },
+    "D6_listening_balance": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[02:42]",
+          "speaker": "PARENT",
+          "quote": "Koi 2-part installment ya discount option hai kya?"
+        },
+        {
+          "ts": "[03:00]",
+          "speaker": "COUNSELLOR",
+          "quote": "zero extra interest!"
+        }
+      ],
+      "why": "48% rep talk time; answers each of the parent's three points in turn."
+    },
+    "D7_compliance_accuracy": {
+      "score": 3,
+      "evidence": [
+        {
+          "ts": "[03:00]",
+          "speaker": "COUNSELLOR",
+          "quote": "main aapko 10% scholar discount de sakti hoon, jisse 48 classes ki fee Rs. 12,000 ki jagah Rs. 10,800 ho jayegi"
+        }
+      ],
+      "why": "Discount and installment are inside policy; two product/competitor claims are not verifiable and the discount was offered pre-emptively."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": false,
+    "revoked_credit": []
+  },
+  "compliance_flags": [
+    {
+      "id": "LR-01",
+      "severity": "LOW",
+      "evidence": [
+        {
+          "ts": "[02:20]",
+          "speaker": "COUNSELLOR",
+          "quote": "exam week mein hamare portal par 'Exam Pause / Reschedule' button hota hai"
+        }
+      ],
+      "policy_reference": "Not in claims_registry",
+      "why": "Product feature promised to retain the sale; confirm it exists before the follow-up repeats it."
+    },
+    {
+      "id": "LR-01",
+      "severity": "LOW",
+      "evidence": [
+        {
+          "ts": "[01:40]",
+          "speaker": "COUNSELLOR",
+          "quote": "price bhi 1-on-1 se almost half padta hai"
+        }
+      ],
+      "policy_reference": "Not in claims_registry; competitor price not verified",
+      "why": "Comparative price claim about a named competitor's 1-on-1 product is unverified."
+    }
+  ],
+  "unverified_claims": [
+    {
+      "ts": "[02:20]",
+      "claim": "Exam Pause / Reschedule button means no paid class is wasted"
+    },
+    {
+      "ts": "[01:40]",
+      "claim": "Bambinos price is almost half of 1-on-1 alternatives"
+    }
+  ],
+  "compliance_gate": "CLEAR",
+  "escalation": {
+    "required": false,
+    "sla_minutes": null,
+    "route_to": null,
+    "reason": null
+  },
+  "post_call_hygiene": [
+    "Rep logged 'Thinking / comparing with planetspark and school exam going on': understates intent. The parent accepted the plan and attempted payment at 20:45 IST.",
+    "Order 99405 Payment_Failed: Bank_OTP_Timeout_On_UPI_Mandate (Installment 1 of 2, Rs. 5,400). No recovery action logged.",
+    "next_followup_at 2026-11-05 12:00 IST is today; exams start on the 15th, so the window to start a class before exams is closing.",
+    "10% discount (Rs. 1,200, within cap) was offered pre-emptively; the installment alone solved the cash-flow concern."
+  ],
+  "headline": "Strong Hinglish call; parent agreed and tried to pay but the UPI mandate timed out and nobody followed up.",
+  "coaching": {
+    "route": "REP",
+    "focus_skill": "Find the second decision-maker before offering a discount",
+    "note": "Pooja, your PlanetSpark answer at [01:40] worked: Rajesh himself agreed (peers fix stage fear) at [02:10]. The gap is [01:14]: 'mummy bol rahi hain exams ke baad dekhenge' means mummy is deciding too. Also, the installment already solved the cash-flow worry, so the 10% could wait. Try: 'Sir, mummy ka sabse bada sawal kya hoga? Main 1-minute note bhej deti hoon jo aap unhe dikha sakte hain.' This week: ask who else decides before offering any discount.",
+    "manager_summary": "Good call. Missed second decision-maker; discount given pre-emptively (within cap). Payment failure needs same-day recovery; verify Exam Pause feature."
+  },
+  "raw_score": 73.0,
+  "total_score": 73.0,
+  "capped": false
+}

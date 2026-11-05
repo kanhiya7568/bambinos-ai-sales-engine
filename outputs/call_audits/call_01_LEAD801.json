@@ -1,0 +1,173 @@
+{
+  "call_id": 7001,
+  "lead_code": "LEAD-801",
+  "counsellor": "Rohan S***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[00:08]",
+          "speaker": "COUNSELLOR",
+          "quote": "did you see that huge smile on his face at the end when he finished his space superhero story?"
+        },
+        {
+          "ts": "[00:24]",
+          "speaker": "PARENT",
+          "quote": "Yes! Honestly I was sitting right behind the laptop and I was surprised."
+        }
+      ],
+      "why": "Opens with the child's real smile; praise matches the teacher's note and the parent warms immediately."
+    },
+    "D2_discovery": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[00:46]",
+          "speaker": "COUNSELLOR",
+          "quote": "What Ms. Rhea specifically noted in her evaluation today is that Aarav already has rich vocabulary"
+        },
+        {
+          "ts": "[03:18]",
+          "speaker": "COUNSELLOR",
+          "quote": "what is the #1 question he usually asks before saying yes to a program for Aarav?"
+        }
+      ],
+      "why": "Surfaces the parent's pain, links it to a demo observation, and asks what the absent father will ask."
+    },
+    "D3_pitch_before_price": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[01:55]",
+          "speaker": "COUNSELLOR",
+          "quote": "Strictly maximum 6 kids per batch, ma'am, all aged 7 to 9."
+        },
+        {
+          "ts": "[02:32]",
+          "speaker": "COUNSELLOR",
+          "quote": "that comes to Rs. 250 per live session"
+        }
+      ],
+      "why": "Batch size, attention model and showcase explained first; fee comes only after the parent asks and is reframed per session."
+    },
+    "D4_objection_handling": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[03:48]",
+          "speaker": "COUNSELLOR",
+          "quote": "If I send you a crisp 60-second summary on WhatsApp showing Ms. Rhea's exact feedback on Aarav's 'asteroid' story today"
+        },
+        {
+          "ts": "[04:06]",
+          "speaker": "PARENT",
+          "quote": "Seeing what Aarav actually did today will convince him much faster than me explaining it."
+        }
+      ],
+      "why": "Isolates the spouse objection, answers the father's likely question with the child's own evidence, and builds a forwardable proof."
+    },
+    "D5_honest_urgency_close": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[04:15]",
+          "speaker": "COUNSELLOR",
+          "quote": "Shall I give you a quick 2-minute call tomorrow at 11 AM?"
+        },
+        {
+          "ts": "[04:30]",
+          "speaker": "PARENT",
+          "quote": "Yes, 11 AM tomorrow works."
+        }
+      ],
+      "why": "Dated next step agreed by the parent; seat hold is time-boxed. Seat count should be verified in the roster system."
+    },
+    "D6_listening_balance": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[01:42]",
+          "speaker": "PARENT",
+          "quote": "How many kids are in the regular batch?"
+        },
+        {
+          "ts": "[02:32]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ms. Rhea has a Grade 3 batch on Tuesdays and Thursdays from 6:00 PM to 6:50 PM IST"
+        }
+      ],
+      "why": "46% rep talk time; every parent question (batch size, timings, fee) is answered directly."
+    },
+    "D7_compliance_accuracy": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[02:32]",
+          "speaker": "COUNSELLOR",
+          "quote": "backed by our official 14-day, 100% risk-free refund policy"
+        }
+      ],
+      "why": "Price, 14-day refund and batch size are correct; refund conditions (up to 4 classes) were not stated and several programme claims are unverified."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": false,
+    "revoked_credit": []
+  },
+  "compliance_flags": [
+    {
+      "id": "LR-01",
+      "severity": "LOW",
+      "evidence": [
+        {
+          "ts": "[02:32]",
+          "speaker": "COUNSELLOR",
+          "quote": "backed by our official 14-day, 100% risk-free refund policy"
+        }
+      ],
+      "policy_reference": "official_refund_policy: 100% refund within first 14 days (up to 4 classes attended), pro-rata thereafter",
+      "why": "'Risk-free' omits the up-to-4-classes condition. Minor; coach to state the condition."
+    }
+  ],
+  "unverified_claims": [
+    {
+      "ts": "[01:55]",
+      "claim": "Ms. Rhea calls on every child 4 to 5 times per session"
+    },
+    {
+      "ts": "[01:55]",
+      "claim": "every 4th week is a 'Stage Showcase' with parents watching live"
+    },
+    {
+      "ts": "[02:32]",
+      "claim": "currently 5 kids are enrolled, so there is 1 seat left (verify against live roster)"
+    },
+    {
+      "ts": "[04:15]",
+      "claim": "provisional seat hold until 11:00 AM tomorrow (verify the system supports holds)"
+    }
+  ],
+  "compliance_gate": "CLEAR",
+  "escalation": {
+    "required": false,
+    "sla_minutes": null,
+    "route_to": null,
+    "reason": null
+  },
+  "post_call_hygiene": [
+    "Rep logged 'Call back tomorrow / will ask husband and tell tomorrow': misses the father's #1 question, the 11:00 AM slot and the held seat.",
+    "CRM stage 'Follow_Up_Warm' understates intent: fee accepted, batch fits, payment link opened twice (order 99401).",
+    "Duplicate LEAD-811 (website brochure download, next morning) is likely the father doing due diligence; merge into this lead."
+  ],
+  "headline": "Consultative benchmark call: child-specific proof, clean spouse-objection handling, dated next step.",
+  "coaching": {
+    "route": "REP",
+    "focus_skill": "Precise refund wording",
+    "note": "Rohan, your call is a model for the team. At [04:06] Divya said Aarav's own story would convince her husband faster than anything you could say, and you had already planned exactly that. One tweak: at [02:32] 'risk-free refund' leaves out the up-to-4-classes condition. Try: 'full refund within 14 days if he has attended up to 4 classes, so you can see the fit first.' This week: use that wording on every call, then tell me which parents relax when they hear it.",
+    "manager_summary": "Score is top-tier. Use clip [01:20]-[04:30] as a training example. Verify seat-hold feature and roster count."
+  },
+  "raw_score": 91.0,
+  "total_score": 91.0,
+  "capped": false
+}

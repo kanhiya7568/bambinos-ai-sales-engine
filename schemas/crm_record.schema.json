@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "crm_record",
+  "type": "object",
+  "required": [
+    "lead_code",
+    "intent",
+    "primary_objection",
+    "objection_status",
+    "lead_stage",
+    "nba",
+    "follow_up_mode",
+    "ai_note"
+  ],
+  "properties": {
+    "lead_code": {},
+    "call_id": {},
+    "owner": {},
+    "tz": {},
+    "priority": {},
+    "lead_stage": {},
+    "intent": {},
+    "primary_objection": {},
+    "objection_status": {},
+    "secondary_objections": {},
+    "objection_evidence": {},
+    "sub_reason": {},
+    "blocker_now": {},
+    "demo_highlight": {},
+    "nba": {},
+    "follow_up_mode": {},
+    "ai_note": {},
+    "discrepancy": {},
+    "rule_flags": {},
+    "crm_changes": {}
+  }
+}

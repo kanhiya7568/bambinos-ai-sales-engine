@@ -1,0 +1,938 @@
+[
+  {
+    "lead_code": "LEAD-801",
+    "call_id": 7001,
+    "owner": "Rohan S*** (204)",
+    "tz": "IST",
+    "priority": "P1",
+    "lead_stage": "Hot_Closing",
+    "intent": {
+      "band": "Hot",
+      "score": 8,
+      "anchor_used": "8: fee + batch accepted, ONE resolvable blocker (father) with a dated next step",
+      "confidence": "high",
+      "evidence": [
+        {
+          "ts": "[02:58]",
+          "speaker": "PARENT",
+          "quote": "Rs. 12,000 for 6 months is quite reasonable"
+        },
+        {
+          "ts": "[04:30]",
+          "speaker": "PARENT",
+          "quote": "Yes, 11 AM tomorrow works."
+        },
+        {
+          "source": "order_row",
+          "field": "payment_link_status",
+          "value": "Unpaid_Link_Opened_Twice"
+        }
+      ]
+    },
+    "primary_objection": "Spouse_Decision",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [
+      {
+        "ts": "[02:58]",
+        "speaker": "PARENT",
+        "quote": "my husband wasn't home during the Zoom demo today, and we always decide together on Aarav's classes"
+      }
+    ],
+    "sub_reason": "father_missed_demo; likely question: 'is this just grammar tuition?'",
+    "blocker_now": "Father has not seen the demo evidence",
+    "demo_highlight": {
+      "verbatim": "At minute 18, when given the 3-step 'Superhero Hook' template, Aarav unmuted and delivered a 45-second space rescue story with full hand gestures and a huge smile!",
+      "parent_safe_line": "Aarav went from freezing to a confident 45-second space-rescue story once he had a 3-step structure."
+    },
+    "nba": {
+      "type": "ACT-01",
+      "action": "Send forwardable 60-second proof pack for the father (teacher's note + Stage Showcase roadmap) before he gets home, then 11 AM call",
+      "owner": "Rohan S***",
+      "due_local": "2026-11-02 19:30",
+      "channel": "WhatsApp + call"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Mother accepts fee (Rs. 12,000) and Tue-Thu 6 PM batch; father decides jointly and handles the card. His question: grammar tuition or fix stage fear? Proof pack promised tonight; call 11 AM 11/03; seat provisionally held. Link opened twice.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Rep logged a vague call-back; actual state is a near-close with a named blocker, a dated call and a payment link opened twice."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Warm",
+        "new": "Hot_Closing"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Call back tomorrow",
+        "new": "Spouse_Decision (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "will ask husband and tell tomorrow",
+        "new": "Mother accepts fee (Rs. 12,000) and Tue-Thu 6 PM batch; father decides jointly and handles the card. His question: grammar tuition or fix stage fear? Proof pack promised tonight; call 11 AM 11/03; seat provisionally held. Link opened twice."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-03 11:00:00",
+        "new": "2026-11-02 19:30"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-802",
+    "call_id": 7002,
+    "owner": "Sneha V*** (209)",
+    "tz": "GST",
+    "priority": "P1",
+    "lead_stage": "Warm_Nurturing",
+    "intent": {
+      "band": "Warm",
+      "score": 5,
+      "anchor_used": "5: engaged with a specific pain; key question unanswered; alternative in play",
+      "confidence": "high",
+      "evidence": [
+        {
+          "ts": "[01:28]",
+          "speaker": "PARENT",
+          "quote": "she panics, guesses the wrong operation, or leaves it blank"
+        },
+        {
+          "ts": "[03:08]",
+          "speaker": "PARENT",
+          "quote": "Just send me the curriculum details on WhatsApp."
+        }
+      ]
+    },
+    "primary_objection": "Competitor_Comparison",
+    "objection_status": "Open",
+    "secondary_objections": [
+      {
+        "type": "Price",
+        "status": "Open"
+      }
+    ],
+    "objection_evidence": [
+      {
+        "ts": "[00:50]",
+        "speaker": "PARENT",
+        "quote": "a retired school teacher takes offline maths tuition 3 days a week for AED 350"
+      }
+    ],
+    "sub_reason": "value_not_proven_vs_local_tuition; word_problem_anxiety",
+    "blocker_now": "Parent has not been told what the teacher saw or how the Bar-Model fixes word problems",
+    "demo_highlight": {
+      "verbatim": "Used the visual 'Zing Bar-Model' method to solve two Grade-6 British Curriculum fraction word puzzles completely on her own and shouted 'Oh, that was so easy!'",
+      "parent_safe_line": "Zoya solved two fraction word puzzles on her own with the Bar-Model method and said 'that was so easy!'"
+    },
+    "nba": {
+      "type": "ACT-09",
+      "action": "Send curriculum outline plus the Bar-Model evidence she asked for; no payment link, no discount",
+      "owner": "Sneha V***",
+      "due_local": "2026-11-02 20:00",
+      "channel": "WhatsApp"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Mother's real doubt: will online help Zoya's 4-line word-problem panic better than an AED 350 local tutor? Never answered; price dumped early. Send curriculum + Bar-Model proof. No pressure: she will consult the tutor.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Rep logged Cold / 'price high'. Parent is Warm; the objection is value versus a local tutor, not price alone."
+    },
+    "rule_flags": [
+      "PRICE_MISMATCH_VS_CATALOG: order standard_amount 12000 AED vs catalog 1200 AED (10x)"
+    ],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Cold",
+        "new": "Warm_Nurturing"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Price issue",
+        "new": "Competitor_Comparison (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "price high thinking",
+        "new": "Mother's real doubt: will online help Zoya's 4-line word-problem panic better than an AED 350 local tutor? Never answered; price dumped early. Send curriculum + Bar-Model proof. No pressure: she will consult the tutor."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-02 20:00"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-803",
+    "call_id": 7003,
+    "owner": "Amitabh R*** (212)",
+    "tz": "IST",
+    "priority": "P0",
+    "lead_stage": "Compliance_Hold",
+    "intent": {
+      "band": "Cold",
+      "score": 1,
+      "anchor_used": "1: explicit refusal, trust broken",
+      "confidence": "high",
+      "evidence": [
+        {
+          "ts": "[03:54]",
+          "speaker": "PARENT",
+          "quote": "I am cutting the call right now. Do not call me again!"
+        }
+      ]
+    },
+    "primary_objection": "Other_Trust_Or_Compliance",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [
+      {
+        "ts": "[02:35]",
+        "speaker": "PARENT",
+        "quote": "That sounds like a fake sales promise."
+      }
+    ],
+    "sub_reason": "rep_misconduct; phone_DNC_requested",
+    "blocker_now": "Parent holds a payment link and verbal promises that are not company policy",
+    "demo_highlight": {
+      "verbatim": "Successfully blended 6 four-letter 'ai' and 'ee' words ('train', 'brain', 'green') using the tap-and-slide phonics fingers technique without guessing once.",
+      "parent_safe_line": "Vihaan blended six 'ai'/'ee' words, including 'train', without guessing; that is the exact fix for his 'train/truck' slip."
+    },
+    "nba": {
+      "type": "ACT-04",
+      "action": "Manager review: void order 99403, set phone DNC, hold rep outbound; manager decides on ONE written correction (no sales content)",
+      "owner": "Head of Sales",
+      "due_local": "2026-11-03 12:01",
+      "channel": "Internal (Slack + task)"
+    },
+    "follow_up_mode": "MANAGER_ONLY",
+    "ai_note": "Do not phone: parent asked not to be called. Rep gave Rank-1 guarantee, 42% discount, 6-month refund, blacklist threat. Void order 99403. Manager decides on one written correction. Parent liked teacher Ms. Simran.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Rep logged Hot / 'Interested, will pay today'. The parent ended the call and refused further contact."
+    },
+    "rule_flags": [
+      "DISCOUNT_ANOMALY: discount 4000 INR = 42.1% of catalog fee vs cap 10% (limit 950 INR)",
+      "UNAUTHORIZED_LINK: payment plan type is 'Unauthorized_Custom_Link'",
+      "POLICY_RULE_MISMATCH: gateway rule says 15% cap, catalog policy says 10%"
+    ],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Hot",
+        "new": "Compliance_Hold"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Interested",
+        "new": "Other_Trust_Or_Compliance (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "good call sent payment link will pay today",
+        "new": "Do not phone: parent asked not to be called. Rep gave Rank-1 guarantee, 42% discount, 6-month refund, blacklist threat. Void order 99403. Manager decides on one written correction. Parent liked teacher Ms. Simran."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-03 18:00:00",
+        "new": "2026-11-03 12:01"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-804",
+    "call_id": 7004,
+    "owner": "Rohan S*** (204)",
+    "tz": "PST",
+    "priority": "P2",
+    "lead_stage": "Enrolled_Paid",
+    "intent": {
+      "band": "Hot",
+      "score": 10,
+      "anchor_used": "10: paid (order_row)",
+      "confidence": "high",
+      "evidence": [
+        {
+          "source": "order_row",
+          "field": "payment_link_status",
+          "value": "Paid"
+        },
+        {
+          "source": "order_row",
+          "field": "paid_at",
+          "value": "2026-11-03 11:40:12"
+        },
+        {
+          "ts": "[01:18]",
+          "speaker": "PARENT",
+          "quote": "I am 100% sold on enrolling her in the 48-session track."
+        }
+      ]
+    },
+    "primary_objection": "Schedule_Conflict",
+    "objection_status": "Resolved",
+    "secondary_objections": [],
+    "objection_evidence": [
+      {
+        "ts": "[01:18]",
+        "speaker": "PARENT",
+        "quote": "Meera has her competitive gymnastics team practice every Tuesday and Thursday from 4:30 PM to 6:30 PM PST"
+      }
+    ],
+    "sub_reason": "weekday_gymnastics_clash; solved with Sat-Sun 9:30 AM PST batch",
+    "blocker_now": null,
+    "demo_highlight": {
+      "verbatim": "Connected Chapter 2's concept of 'Samatvam' (staying balanced under pressure) to her gymnastics balance-beam routine and wrote the shloka meaning in her notebook.",
+      "parent_safe_line": "Meera linked 'Samatvam' (staying balanced under pressure) to her gymnastics beam routine."
+    },
+    "nba": {
+      "type": "ACT-07",
+      "action": "Stop sales cadence, cancel the 20:00 follow-up, send onboarding (first-class date, teacher welcome)",
+      "owner": "Student Success",
+      "due_local": "2026-11-03 11:45",
+      "channel": "WhatsApp (transactional)"
+    },
+    "follow_up_mode": "STOP",
+    "ai_note": "Paid USD 265 on 11/03 11:40 PST (order 99404). Little Yogi Sat-Sun 9:30 PST with Acharya Aditi (gymnastics Tue/Thu). Cancel sales follow-ups; send onboarding. Parent wants values taught without lectures.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "CRM stage still Payment_Link_Sent and a follow-up is scheduled for 20:00, but the order is Paid."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Payment_Link_Sent",
+        "new": "Enrolled_Paid"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Schedule issue",
+        "new": "Schedule_Conflict (Resolved)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "wants weekend batch sent link",
+        "new": "Paid USD 265 on 11/03 11:40 PST (order 99404). Little Yogi Sat-Sun 9:30 PST with Acharya Aditi (gymnastics Tue/Thu). Cancel sales follow-ups; send onboarding. Parent wants values taught without lectures."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-03 20:00:00",
+        "new": "2026-11-03 11:45"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-805",
+    "call_id": 7005,
+    "owner": "Pooja M*** (215)",
+    "tz": "IST",
+    "priority": "P0",
+    "lead_stage": "Payment_Recovery",
+    "intent": {
+      "band": "Hot",
+      "score": 9,
+      "anchor_used": "9: verbal yes and payment attempted (failed technically)",
+      "confidence": "high",
+      "evidence": [
+        {
+          "ts": "[03:28]",
+          "speaker": "PARENT",
+          "quote": "yeh kaafi comfortable hai"
+        },
+        {
+          "ts": "[03:28]",
+          "speaker": "PARENT",
+          "quote": "main raat ko dinner ke baad UPI se kar dunga"
+        },
+        {
+          "source": "order_row",
+          "field": "payment_link_status",
+          "value": "Payment_Failed: Bank_OTP_Timeout_On_UPI_Mandate"
+        }
+      ]
+    },
+    "primary_objection": "Competitor_Comparison",
+    "objection_status": "Resolved",
+    "secondary_objections": [
+      {
+        "type": "Schedule_Conflict",
+        "status": "Open"
+      },
+      {
+        "type": "Price",
+        "status": "Resolved"
+      },
+      {
+        "type": "Spouse_Decision",
+        "status": "Latent"
+      }
+    ],
+    "objection_evidence": [
+      {
+        "ts": "[01:14]",
+        "speaker": "PARENT",
+        "quote": "pichle hafte humne PlanetSpark ka bhi demo liya tha, unka 1-on-1 class hai aur woh log roz phone kar rahe hain"
+      },
+      {
+        "ts": "[01:14]",
+        "speaker": "PARENT",
+        "quote": "toh mummy bol rahi hain exams ke baad dekhenge"
+      }
+    ],
+    "sub_reason": "competitor_1on1; half_yearly_exams_from_15th; cash_flow_festival; mother_influences_decision",
+    "blocker_now": "Payment_Failed: UPI mandate OTP timeout (Rs. 5,400, installment 1 of 2)",
+    "demo_highlight": {
+      "verbatim": "Practiced the 'PEEL' (Point-Evidence-Explain-Link) method on the topic 'Should homework be banned?' and spoke for 60 seconds straight without using a single filler word!",
+      "parent_safe_line": "Kabir spoke for 60 seconds on 'Should homework be banned?' without a single filler word, using the PEEL method."
+    },
+    "nba": {
+      "type": "ACT-02",
+      "action": "Send fresh one-time link (UPI/card/netbanking, no mandate) for the same Rs. 5,400; same-day call to confirm and agree exam-week plan",
+      "owner": "Pooja M***",
+      "due_local": "2026-11-03 21:15",
+      "channel": "WhatsApp + call"
+    },
+    "follow_up_mode": "AUTO",
+    "ai_note": "Father agreed to the 2-part plan (10% off, Rs. 5,400 now). UPI mandate timed out at 8:45 PM. Needs a fresh one-time link. Mother also decides; exams start on the 15th; PlanetSpark 1-on-1 demo. Verify Exam Pause feature.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Rep logged Warm / 'Thinking'. The parent accepted the plan and tried to pay; only a payment failure stands in the way."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Warm",
+        "new": "Payment_Recovery"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Thinking",
+        "new": "Competitor_Comparison (Resolved)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "comparing with planetspark and school exam going on",
+        "new": "Father agreed to the 2-part plan (10% off, Rs. 5,400 now). UPI mandate timed out at 8:45 PM. Needs a fresh one-time link. Mother also decides; exams start on the 15th; PlanetSpark 1-on-1 demo. Verify Exam Pause feature."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-05 12:00:00",
+        "new": "2026-11-03 21:15"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-806",
+    "call_id": 7006,
+    "owner": "Karan K*** (218)",
+    "tz": "IST",
+    "priority": "P1",
+    "lead_stage": "Warm_Nurturing",
+    "intent": {
+      "band": "Warm",
+      "score": 4,
+      "anchor_used": "4: parent open to an alternative the company has not yet offered",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "ts": "[02:46]",
+          "speaker": "PARENT",
+          "quote": "Until someone from your academic team confirms a batch strictly for 6-year-olds or lets her do a calm 1-on-1 starter session, I'm not paying anything."
+        }
+      ]
+    },
+    "primary_objection": "Child_Not_Interested",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [
+      {
+        "ts": "[01:32]",
+        "speaker": "PARENT",
+        "quote": "turned off her camera at minute 15"
+      }
+    ],
+    "sub_reason": "demo_batch_mismatch: 6-year-old in a room with 8-9-year-olds; child liked the 1-on-1 warm-up",
+    "blocker_now": "No age 5-6 micro-batch or 1-on-1 bridge has been offered",
+    "demo_highlight": {
+      "verbatim": "Smiled during the first 10 minutes when she captured the Dragon's treasure chest with the Knight in the 1-on-1 warm-up puzzle.",
+      "parent_safe_line": "Ananya lit up in the first 10 minutes capturing the dragon's treasure with the Knight."
+    },
+    "nba": {
+      "type": "ACT-05",
+      "action": "Academic Ops confirms micro-batch (max 3, age 5-6) or complimentary 1-on-1 bridge; Team Lead sends the first message; reassign owner",
+      "owner": "Team Lead + Academic Ops",
+      "due_local": "2026-11-04 15:20",
+      "channel": "Internal, then WhatsApp"
+    },
+    "follow_up_mode": "MANAGER_ONLY",
+    "ai_note": "Mother will buy only if Ananya (6) gets an age 5-6 micro-batch or 1-on-1 bridge; the mixed-age demo overwhelmed her. Ops to confirm; first message from Team Lead, not Karan. Child loved the first 10 minutes.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Rep logged 'child not interested' (Cold). Root cause is a demo placement error, and the remedy is written into policy."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Cold",
+        "new": "Warm_Nurturing"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Child not interested",
+        "new": "Child_Not_Interested (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "kid did not like demo",
+        "new": "Mother will buy only if Ananya (6) gets an age 5-6 micro-batch or 1-on-1 bridge; the mixed-age demo overwhelmed her. Ops to confirm; first message from Team Lead, not Karan. Child loved the first 10 minutes."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-04 15:20"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-807",
+    "call_id": null,
+    "owner": "Sneha V*** (209)",
+    "tz": "IST",
+    "priority": "P1",
+    "lead_stage": "Needs_First_Call",
+    "intent": {
+      "band": "Warm",
+      "score": 7,
+      "anchor_used": "7: child volunteered a start-intent signal (asked when the batch starts); fee not yet discussed",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source": "demo_eval",
+          "field": "demo_magic_moment_for_parent",
+          "value": "Scored 5/5 on the live Olympiad inference challenge and asked when the regular batch starts!"
+        },
+        {
+          "source": "demo_eval",
+          "field": "child_engagement_score_1_to_5",
+          "value": "5"
+        }
+      ]
+    },
+    "primary_objection": "None_Identified",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "never_called",
+    "blocker_now": "No counsellor contact since the demo ended",
+    "demo_highlight": {
+      "verbatim": "Scored 5/5 on the live Olympiad inference challenge and asked when the regular batch starts! (HIGH INTENT - STILL UNCALLED BY REP)",
+      "parent_safe_line": "Arjun scored 5/5 on the live Olympiad inference challenge and asked when the regular batch starts."
+    },
+    "nba": {
+      "type": "ACT-06",
+      "action": "First call within SLA; share batch timings for Olympiad & Creative Writing (Rs. 13,500 list); never promise medals",
+      "owner": "Sneha V***",
+      "due_local": "2026-11-02 17:30",
+      "channel": "Call + WhatsApp"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Demo 11/02: scored 5/5 and asked when the regular batch starts. Never called. Needs a first call now with batch timings for the Olympiad & Creative Writing track. Do not guarantee medals. List price Rs. 13,500; max discount 10%.",
+    "discrepancy": {
+      "flag": false,
+      "explanation": null
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Demo_Completed_Uncalled",
+        "new": "Needs_First_Call"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "NULL",
+        "new": "None_Identified (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "NULL",
+        "new": "Demo 11/02: scored 5/5 and asked when the regular batch starts. Never called. Needs a first call now with batch timings for the Olympiad & Creative Writing track. Do not guarantee medals. List price Rs. 13,500; max discount 10%."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-02 17:30"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-808",
+    "call_id": null,
+    "owner": "Amitabh R*** (212)",
+    "tz": "AST",
+    "priority": "P1",
+    "lead_stage": "Warm_Nurturing",
+    "intent": {
+      "band": "Warm",
+      "score": 5,
+      "anchor_used": "5: engaged child; parent view unknown (no call record)",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "demo_eval",
+          "field": "demo_magic_moment_for_parent",
+          "value": "Loved the 'Mystery Box' impromptu speaking game and asked to do two extra rounds."
+        },
+        {
+          "source": "crm_row",
+          "field": "manual_rep_disposition",
+          "value": "Busy"
+        }
+      ]
+    },
+    "primary_objection": "None_Identified",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "call_record_missing; price_unquotable_catalog_gap_class_108",
+    "blocker_now": "Call content unknown; class 108 is missing from the pricing catalog",
+    "demo_highlight": {
+      "verbatim": "Loved the 'Mystery Box' impromptu speaking game and asked to do two extra rounds.",
+      "parent_safe_line": "Their child loved the 'Mystery Box' game and asked for two extra rounds."
+    },
+    "nba": {
+      "type": "ACT-11",
+      "action": "Pull the 11/02 call recording for review (rep is under compliance review); reassign; WhatsApp with the demo highlight",
+      "owner": "Team Lead",
+      "due_local": "2026-11-03 20:10",
+      "channel": "Internal, then WhatsApp"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Rep logged 'Busy / ok': unusable. Child loved the Mystery Box game. No call recording in the dataset; class 108 missing in the catalog so no price can be quoted. Review the call; reassign; WhatsApp with the demo highlight.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "'Busy / ok' carries no information and no next follow-up is scheduled."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Warm",
+        "new": "Warm_Nurturing"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Busy",
+        "new": "None_Identified (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "ok",
+        "new": "Rep logged 'Busy / ok': unusable. Child loved the Mystery Box game. No call recording in the dataset; class 108 missing in the catalog so no price can be quoted. Review the call; reassign; WhatsApp with the demo highlight."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-03 20:10"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-809",
+    "call_id": null,
+    "owner": "Rohan S*** (204)",
+    "tz": "GMT",
+    "priority": "P0",
+    "lead_stage": "Payment_Recovery",
+    "intent": {
+      "band": "Hot",
+      "score": 9,
+      "anchor_used": "9: payment attempted, failed technically (3DS)",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source": "order_row",
+          "field": "payment_link_status",
+          "value": "Payment_Failed: 3DS_Authentication_Declined_By_Issuer"
+        },
+        {
+          "source": "crm_row",
+          "field": "manual_rep_notes",
+          "value": "mother tried paying on stripe link failed need to send new link"
+        }
+      ]
+    },
+    "primary_objection": "None_Identified",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "payment_friction_3DS",
+    "blocker_now": "Card declined at 3DS by the issuer (GBP 210)",
+    "demo_highlight": {
+      "verbatim": "Solved the 'Tower of Hanoi' 4-disc logic challenge on his first attempt.",
+      "parent_safe_line": "They solved the 4-disc Tower of Hanoi challenge on the first attempt."
+    },
+    "nba": {
+      "type": "ACT-02",
+      "action": "Send a fresh link with approve-in-banking-app guidance or an alternative payment method (same GBP 210); confirm GBP price in catalog",
+      "owner": "Rohan S***",
+      "due_local": "2026-11-03 14:45",
+      "channel": "WhatsApp + call"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Payment GBP 210 failed: 3DS declined by issuer 11/03 14:15. Mother already tried; needs a fresh link with bank-app approval guidance or another card. GBP price missing in catalog. Child solved Tower of Hanoi first try.",
+    "discrepancy": {
+      "flag": false,
+      "explanation": null
+    },
+    "rule_flags": [
+      "CATALOG_GAP: No GBP fee for class 205 in the catalog; amount 210 GBP cannot be verified"
+    ],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Payment_Link_Sent",
+        "new": "Payment_Recovery"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Card error",
+        "new": "None_Identified (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "mother tried paying on stripe link failed need to send new link",
+        "new": "Payment GBP 210 failed: 3DS declined by issuer 11/03 14:15. Mother already tried; needs a fresh link with bank-app approval guidance or another card. GBP price missing in catalog. Child solved Tower of Hanoi first try."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-03 19:00:00",
+        "new": "2026-11-03 14:45"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-810",
+    "call_id": null,
+    "owner": "Karan K*** (218)",
+    "tz": "IST",
+    "priority": "P2",
+    "lead_stage": "Warm_Nurturing",
+    "intent": {
+      "band": "Warm",
+      "score": 4,
+      "anchor_used": "4: lukewarm; parent asked for a call back, reason unknown",
+      "confidence": "low",
+      "evidence": [
+        {
+          "source": "demo_eval",
+          "field": "demo_magic_moment_for_parent",
+          "value": "Mastered the 'thumbs-up b&d bed' trick in 5 minutes and read 4 sentences aloud."
+        },
+        {
+          "source": "crm_row",
+          "field": "manual_rep_notes",
+          "value": "cb"
+        }
+      ]
+    },
+    "primary_objection": "None_Identified",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "callback_requested_reason_unknown; stale_followup",
+    "blocker_now": "Unknown",
+    "demo_highlight": {
+      "verbatim": "Mastered the 'thumbs-up b&d bed' trick in 5 minutes and read 4 sentences aloud.",
+      "parent_safe_line": "They mastered the 'thumbs-up b and d' trick in 5 minutes and read four sentences aloud."
+    },
+    "nba": {
+      "type": "ACT-12",
+      "action": "Re-engage with the demo proof and ask what the parent wanted to think about; fix the follow-up date",
+      "owner": "Karan K*** (or reassigned)",
+      "due_local": "2026-11-03 12:30",
+      "channel": "WhatsApp + call"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Follow-up date (11/01) is before the call (11/02): stale. Rep notes 'cb' unusable. Child mastered the b/d trick in 5 minutes and read 4 sentences. Re-engage with demo proof; find out why a callback was requested.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "'Call back / cb' with a follow-up date earlier than the call itself."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Follow_Up_Warm",
+        "new": "Warm_Nurturing"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Call back",
+        "new": "None_Identified (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "cb",
+        "new": "Follow-up date (11/01) is before the call (11/02): stale. Rep notes 'cb' unusable. Child mastered the b/d trick in 5 minutes and read 4 sentences. Re-engage with demo proof; find out why a callback was requested."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "2026-11-01 10:00:00",
+        "new": "2026-11-03 12:30"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-811",
+    "call_id": null,
+    "owner": "Pooja M*** (215) -> merge into Rohan S*** (204)",
+    "tz": "IST",
+    "priority": "P2",
+    "lead_stage": "Duplicate_Merged",
+    "intent": {
+      "band": "Hot",
+      "score": 8,
+      "anchor_used": "Inherits LEAD-801 (8); brochure download adds a buying signal",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source": "crm_row",
+          "field": "manual_rep_notes",
+          "value": "parent clicked brochure download on website"
+        },
+        {
+          "source": "crm_row",
+          "field": "created_at",
+          "value": "2026-11-03 08:10:00"
+        }
+      ]
+    },
+    "primary_objection": "Spouse_Decision",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "duplicate_of_LEAD-801 (same user_id 51001, student_id 78001, mobile)",
+    "blocker_now": "Two owners on one family",
+    "demo_highlight": {
+      "verbatim": "At minute 18, when given the 3-step 'Superhero Hook' template, Aarav unmuted and delivered a 45-second space rescue story with full hand gestures and a huge smile!",
+      "parent_safe_line": "Aarav went from freezing to a confident 45-second space-rescue story once he had a 3-step structure."
+    },
+    "nba": {
+      "type": "ACT-08",
+      "action": "Merge into LEAD-801; remove Pooja's assignment; log the brochure download as an intent signal on LEAD-801; no new outreach",
+      "owner": "Sales Ops",
+      "due_local": "2026-11-03 08:15",
+      "channel": "CRM"
+    },
+    "follow_up_mode": "STOP",
+    "ai_note": "Duplicate of LEAD-801 (same user 51001 / student 78001). Website brochure download 11/03 08:10, three hours before the 11 AM call: likely the father's due diligence. Merge; keep Rohan as sole owner; no new outreach.",
+    "discrepancy": {
+      "flag": true,
+      "explanation": "Open duplicate assigned to a second counsellor; risk of double-contact."
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "New_Duplicate_Lead",
+        "new": "Duplicate_Merged"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "Not called",
+        "new": "Spouse_Decision (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "parent clicked brochure download on website",
+        "new": "Duplicate of LEAD-801 (same user 51001 / student 78001). Website brochure download 11/03 08:10, three hours before the 11 AM call: likely the father's due diligence. Merge; keep Rohan as sole owner; no new outreach."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-03 08:15"
+      }
+    ]
+  },
+  {
+    "lead_code": "LEAD-812",
+    "call_id": null,
+    "owner": "Sneha V*** (209)",
+    "tz": "CST",
+    "priority": "P1",
+    "lead_stage": "Needs_First_Call",
+    "intent": {
+      "band": "Warm",
+      "score": 6,
+      "anchor_used": "6: strong fit signals, no fee/batch discussion yet",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "source": "demo_eval",
+          "field": "demo_magic_moment_for_parent",
+          "value": "Asked how Karma Yoga applies to school grades and sports competitions; Mother was sitting beside her and clapped!"
+        },
+        {
+          "source": "demo_eval",
+          "field": "child_engagement_score_1_to_5",
+          "value": "5"
+        }
+      ]
+    },
+    "primary_objection": "None_Identified",
+    "objection_status": "Open",
+    "secondary_objections": [],
+    "objection_evidence": [],
+    "sub_reason": "never_called; non-ASCII look-alike letters in student_name",
+    "blocker_now": "No counsellor contact since the demo ended",
+    "demo_highlight": {
+      "verbatim": "Asked how Karma Yoga applies to school grades and sports competitions; Mother was sitting beside her and clapped! (HIGH INTENT - UNCALLED BY REP)",
+      "parent_safe_line": "She asked how Karma Yoga applies to school grades and sport, and her mother cheered her on."
+    },
+    "nba": {
+      "type": "ACT-06",
+      "action": "First call or WhatsApp slot-booking inside the Texas 09:00-20:30 window; offer the US weekend small group",
+      "owner": "Sneha V*** (or US-shift counsellor)",
+      "due_local": "2026-11-03 09:00",
+      "channel": "WhatsApp + call"
+    },
+    "follow_up_mode": "COUNSELLOR_APPROVE",
+    "ai_note": "Demo 11/03: asked how Karma Yoga applies to school and sport; mother clapped. Never called. US weekend small group recommended. Student name has Cyrillic look-alike letters: fix. Reach out inside the Texas 09:00-20:30 window.",
+    "discrepancy": {
+      "flag": false,
+      "explanation": null
+    },
+    "rule_flags": [],
+    "crm_changes": [
+      {
+        "field": "crm_lead_stage",
+        "old": "Demo_Completed_Uncalled",
+        "new": "Needs_First_Call"
+      },
+      {
+        "field": "manual_rep_disposition",
+        "old": "NULL",
+        "new": "None_Identified (Open)"
+      },
+      {
+        "field": "manual_rep_notes",
+        "old": "NULL",
+        "new": "Demo 11/03: asked how Karma Yoga applies to school and sport; mother clapped. Never called. US weekend small group recommended. Student name has Cyrillic look-alike letters: fix. Reach out inside the Texas 09:00-20:30 window."
+      },
+      {
+        "field": "next_followup_at",
+        "old": "NULL",
+        "new": "2026-11-03 09:00"
+      }
+    ]
+  }
+]

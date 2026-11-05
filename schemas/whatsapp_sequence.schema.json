@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "whatsapp_sequence",
+  "type": "object",
+  "required": [
+    "lead_code",
+    "mode",
+    "touches",
+    "never_send"
+  ],
+  "properties": {
+    "lead_code": {},
+    "mode": {},
+    "language": {},
+    "stop_alert": {},
+    "touches": {},
+    "never_send": {}
+  }
+}

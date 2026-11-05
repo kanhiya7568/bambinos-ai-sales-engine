@@ -1,0 +1,207 @@
+{
+  "call_id": 7002,
+  "lead_code": "LEAD-802",
+  "counsellor": "Sneha V***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 2,
+      "evidence": [
+        {
+          "ts": "[00:12]",
+          "speaker": "COUNSELLOR",
+          "quote": "How did you find the class?"
+        }
+      ],
+      "why": "Greets by child and course but never uses a real demo moment; praise is generic."
+    },
+    "D2_discovery": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[01:52]",
+          "speaker": "COUNSELLOR",
+          "quote": "don't worry, our curriculum covers fractions, decimals, geometry, and word problems also."
+        }
+      ],
+      "why": "Parent volunteered the real problem (word problems); rep did not probe it or connect it to the teacher's note."
+    },
+    "D3_pitch_before_price": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[00:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "For the 6-month package of 48 classes it is AED 1,200"
+        }
+      ],
+      "why": "Fee for two packages is quoted 30 seconds in, before any link to the Bar-Model method or the child's gap."
+    },
+    "D4_objection_handling": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[01:12]",
+          "speaker": "COUNSELLOR",
+          "quote": "featured on Shark Tank India"
+        },
+        {
+          "ts": "[02:38]",
+          "speaker": "PARENT",
+          "quote": "AED 100 off doesn't answer my question."
+        }
+      ],
+      "why": "Answers a value comparison with a brand claim, a put-down of tuition, and a pay-now discount."
+    },
+    "D5_honest_urgency_close": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[02:54]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ma'am the discount link expires in 30 minutes because batch seats fill very fast in Dubai."
+        },
+        {
+          "ts": "[03:08]",
+          "speaker": "PARENT",
+          "quote": "Please don't rush me."
+        }
+      ],
+      "why": "Pushes a 30-minute expiry link; ends with the parent asking not to be rushed and no dated next step."
+    },
+    "D6_listening_balance": {
+      "score": 2,
+      "evidence": [
+        {
+          "ts": "[02:06]",
+          "speaker": "PARENT",
+          "quote": "Did the teacher today notice why she struggles with word problems?"
+        },
+        {
+          "ts": "[02:18]",
+          "speaker": "COUNSELLOR",
+          "quote": "yes, the teacher gave her some puzzles and she did well"
+        }
+      ],
+      "why": "68% rep talk time; the parent's direct question about the teacher's observation is answered vaguely."
+    },
+    "D7_compliance_accuracy": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[02:18]",
+          "speaker": "COUNSELLOR",
+          "quote": "Uh, let me check... yes, the teacher gave her some puzzles and she did well"
+        }
+      ],
+      "why": "Claims knowledge of the demo without checking; invents urgency; disparages local tuition."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": false,
+    "revoked_credit": []
+  },
+  "compliance_flags": [
+    {
+      "id": "HR-01",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[02:54]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ma'am the discount link expires in 30 minutes because batch seats fill very fast in Dubai."
+        }
+      ],
+      "policy_reference": "No inventory evidence in claims_registry; order 99402 status Unpaid_Link_Not_Clicked",
+      "why": "Time-boxed expiry and scarcity are unsupported and were used to pressure a parent who had asked for information."
+    },
+    {
+      "id": "HR-03",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[02:18]",
+          "speaker": "COUNSELLOR",
+          "quote": "Uh, let me check... yes, the teacher gave her some puzzles and she did well"
+        }
+      ],
+      "policy_reference": "demo_eval 9002: Zoya panics at 4-line word problems; solved two Grade-6 fraction word puzzles via the Zing Bar-Model",
+      "why": "Rep vaguely confirmed 'she did well' without having the evaluation, and missed the single most persuasive fact."
+    },
+    {
+      "id": "HR-05",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[01:12]",
+          "speaker": "COUNSELLOR",
+          "quote": "Building tuition is just old-fashioned rote learning where many kids sit together."
+        }
+      ],
+      "policy_reference": "class 205 policy: explain how visual Bar-Model differs from local rote worksheet tuition (respectfully)",
+      "why": "Put-down of the parent's current tutor instead of a respectful method comparison."
+    },
+    {
+      "id": "MR-01",
+      "severity": "MEDIUM",
+      "evidence": [
+        {
+          "ts": "[00:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "So let me quickly tell you our fee structure for Dubai students."
+        }
+      ],
+      "policy_reference": "class 205 forbidden: 'Do NOT dump price in the first 2 minutes without explaining how visual Bar-Model problem solving differs from local rote worksheet tuition.'",
+      "why": "Price quoted at 00:30, explicitly forbidden by the class 205 policy."
+    },
+    {
+      "id": "MR-02",
+      "severity": "MEDIUM",
+      "evidence": [
+        {
+          "ts": "[00:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "for the 12-month package of 96 classes it is AED 2,100"
+        }
+      ],
+      "policy_reference": "Catalog lists only 48-session plans (class 205: AED 1,200)",
+      "why": "A 96-class AED 2,100 package is not in the official catalog."
+    }
+  ],
+  "unverified_claims": [
+    {
+      "ts": "[00:30]",
+      "claim": "all our classes are gamified and interactive"
+    },
+    {
+      "ts": "[01:12]",
+      "claim": "top 1% certified teachers"
+    },
+    {
+      "ts": "[01:52]",
+      "claim": "Zing app quizzes after every class and parent progress reports every month"
+    }
+  ],
+  "compliance_gate": "REVIEW",
+  "escalation": {
+    "required": true,
+    "sla_minutes": 1440,
+    "route_to": "Team Lead (coaching) + Ops (verify 96-class package)",
+    "reason": "3 HIGH flags and a catalog mismatch; no critical breach."
+  },
+  "post_call_hygiene": [
+    "Rep logged 'Follow_Up_Cold / price high thinking': the parent is Warm and her real objection is unproven value versus a AED 350 local tutor.",
+    "next_followup_at is NULL for a lead the parent asked to receive curriculum details from.",
+    "Order 99402 shows standard_amount 12000.0 AED; catalog fee is AED 1,200 (10x entry error), net 1,100 is consistent with 1,200 minus 100.",
+    "A payment link was generated although the parent asked only for curriculum details."
+  ],
+  "headline": "Price dumped at 00:30; real objection (word-problem fear vs local tutor) never answered; false urgency used.",
+  "coaching": {
+    "route": "REP",
+    "focus_skill": "Lead with the teacher's evidence before any number",
+    "note": "Sneha, you started well by asking how Zoya found the class [00:12]. The turning point was [02:06], when Amina asked whether the teacher noticed why Zoya struggles. Mr. Vikram's note has the answer: Zoya solved two fraction word puzzles on her own with the Bar-Model and said 'that was so easy'. Try: 'You've named her exact gap, ma'am. Mr. Vikram showed Zoya the Bar-Model today and she solved two fraction word puzzles alone.' This week: on your next 5 calls, quote one line from the teacher's note before saying any fee.",
+    "manager_summary": "Price quoted at 00:30 against class-205 policy; 30-min expiry claim; unanswered value question. Coaching, not escalation. Verify the 96-class AED 2,100 package."
+  },
+  "raw_score": 24.0,
+  "total_score": 24.0,
+  "capped": false
+}

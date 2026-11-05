@@ -1,0 +1,193 @@
+{
+  "call_id": 7006,
+  "lead_code": "LEAD-806",
+  "counsellor": "Karan K***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[00:44]",
+          "speaker": "COUNSELLOR",
+          "quote": "She is a natural Grandmaster!"
+        }
+      ],
+      "why": "Praise is generic and contradicts the teacher's note (engagement 2/5, overwhelmed in group)."
+    },
+    "D2_discovery": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[00:05]",
+          "speaker": "COUNSELLOR",
+          "quote": "Let me quickly complete my mandatory call checklist"
+        },
+        {
+          "ts": "[00:32]",
+          "speaker": "PARENT",
+          "quote": "why are you reading questions at me like a robot?"
+        }
+      ],
+      "why": "Three questions are read in one breath from a checklist; no answer is awaited or used. Credit revoked by R4."
+    },
+    "D3_pitch_before_price": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[00:44]",
+          "speaker": "COUNSELLOR",
+          "quote": "Let us lock her seat in the 6-month Unbox Chess Beginners batch for Rs. 11,000 today!"
+        }
+      ],
+      "why": "Price quoted at 00:44; only a fabricated statistic as benefit."
+    },
+    "D4_objection_handling": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[01:58]",
+          "speaker": "COUNSELLOR",
+          "quote": "kids always make excuses"
+        }
+      ],
+      "why": "Dismisses the child's distress and suggests forcing her to adjust."
+    },
+    "D5_honest_urgency_close": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[01:58]",
+          "speaker": "COUNSELLOR",
+          "quote": "I am also offering our official 10% discount so it is Rs. 9,900 if you pay before 6 PM today"
+        }
+      ],
+      "why": "Artificial 6 PM deadline and a pre-payment 'Ops will see later' promise."
+    },
+    "D6_listening_balance": {
+      "score": 0,
+      "evidence": [
+        {
+          "ts": "[01:32]",
+          "speaker": "PARENT",
+          "quote": "Are you even listening to me?!"
+        }
+      ],
+      "why": "74% rep talk time; the parent twice asks if the rep is listening."
+    },
+    "D7_compliance_accuracy": {
+      "score": 1,
+      "evidence": [
+        {
+          "ts": "[01:20]",
+          "speaker": "COUNSELLOR",
+          "quote": "Chess improves IQ, memory, concentration, and maths scores by 40%!"
+        }
+      ],
+      "why": "Unsubstantiated statistic, false urgency and denial of a policy-mandated remedy."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": true,
+    "revoked_credit": [
+      "D2 Discovery: three questions read in one turn, answers ignored",
+      "D1 Rapport: scripted 'praise' contradicts demo evaluation",
+      "D5 Close: rep calls it 'my urgency trial close' (labels the technique instead of using it)"
+    ]
+  },
+  "compliance_flags": [
+    {
+      "id": "HR-04",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[02:18]",
+          "speaker": "PARENT",
+          "quote": "Do you have an age-5-to-6 micro-batch or not?"
+        },
+        {
+          "ts": "[02:38]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ma'am all batches are standard 6 kids, just pay Rs. 9,900 on the link and Ops team will see later."
+        }
+      ],
+      "policy_reference": "class 401: if a 5-6 year old felt overwhelmed in a mixed-age demo, offer a complimentary 1-on-1 bridge session or Age 5-6 Micro-Batch (max 3 kids). demo_eval 9006 recommends Little Starters micro-batch or 1-on-1 bridge.",
+      "why": "Denies the policy-mandated remedy that the parent and the teacher both asked for."
+    },
+    {
+      "id": "HR-02",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[01:20]",
+          "speaker": "COUNSELLOR",
+          "quote": "Chess improves IQ, memory, concentration, and maths scores by 40%!"
+        }
+      ],
+      "policy_reference": "Not in claims_registry; no source",
+      "why": "Fabricated efficacy statistic."
+    },
+    {
+      "id": "HR-01",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[01:58]",
+          "speaker": "COUNSELLOR",
+          "quote": "I am also offering our official 10% discount so it is Rs. 9,900 if you pay before 6 PM today"
+        }
+      ],
+      "policy_reference": "10% is within cap (Rs. 1,100) but the 6 PM expiry is not a system rule",
+      "why": "Time-limited discount used as pressure; amount is legal, the manner is not."
+    },
+    {
+      "id": "HR-07",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[01:58]",
+          "speaker": "COUNSELLOR",
+          "quote": "force her to sit in the 6-kid batch for 3 weeks, she will automatically adjust"
+        }
+      ],
+      "policy_reference": "demo_eval 9006: engagement 2/5; turned off camera after 15 minutes and asked for her mother",
+      "why": "Child-welfare signal dismissed; advises forcing a distressed 6-year-old."
+    },
+    {
+      "id": "HR-03",
+      "severity": "HIGH",
+      "evidence": [
+        {
+          "ts": "[00:44]",
+          "speaker": "COUNSELLOR",
+          "quote": "Ananya did fantastic in the demo class!"
+        }
+      ],
+      "policy_reference": "demo_eval 9006: Absolute_Beginner_Overwhelmed_In_Group, engagement 2",
+      "why": "Praise contradicts the teacher's evaluation."
+    }
+  ],
+  "unverified_claims": [],
+  "compliance_gate": "REVIEW",
+  "escalation": {
+    "required": true,
+    "sla_minutes": 1440,
+    "route_to": "Team Lead (coaching) + Academic Ops (micro-batch / 1-on-1 bridge)",
+    "reason": "Rubric gaming detected; policy-mandated remedy denied; demo placement error upstream."
+  },
+  "post_call_hygiene": [
+    "Rep logged 'Child not interested / kid did not like demo': partly true, but the cause is a demo batch mismatch and the mother is willing to buy once the batch is right.",
+    "next_followup_at is NULL for a recoverable lead.",
+    "Root cause is upstream: a 6-year-old was placed in a demo batch with 8-9-year-olds (batch size 5). Feed to Academic Ops.",
+    "Catalog gap: 'Unbox Chess Little Starters (Age 5-6 Only)' is recommended by the teacher but not listed in the catalog or pricing table."
+  ],
+  "headline": "Rubric gaming detected: checklist read aloud, fake statistic, policy remedy denied, lead recoverable only via micro-batch.",
+  "coaching": {
+    "route": "REP",
+    "focus_skill": "Listen, then answer with the teacher's note",
+    "note": "Karan, you picked the right three topics: goal, weakness and decision-maker. The gap is that Swathi's answer never reached you. At [01:32] she explained that older boys shouted answers and Ananya switched off her camera. Coach Arvind's note says a 5-6-year-old micro-batch or 1-on-1 bridge is the fix, and that is company policy. Try: 'You're right, and Coach Arvind noted it too. I'll request our age 5-6 micro-batch or a free 1-on-1 starter session. Which would suit Ananya?' This week: ask one question, stop, then repeat back what the parent said.",
+    "manager_summary": "Rubric gaming (checklist read aloud; 'my urgency trial close'). 4 HIGH flags incl. denying the micro-batch policy and a fabricated 40% statistic. Treat as coaching; fix demo-placement root cause with Ops."
+  },
+  "raw_score": 7.0,
+  "total_score": 7.0,
+  "capped": false
+}

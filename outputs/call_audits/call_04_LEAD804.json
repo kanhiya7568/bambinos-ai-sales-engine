@@ -1,0 +1,145 @@
+{
+  "call_id": 7004,
+  "lead_code": "LEAD-804",
+  "counsellor": "Rohan S***",
+  "scorecard": {
+    "D1_rapport": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[00:10]",
+          "speaker": "COUNSELLOR",
+          "quote": "It was wonderful seeing Meera in Acharya Aditi's Little Yogi session today."
+        },
+        {
+          "ts": "[00:22]",
+          "speaker": "PARENT",
+          "quote": "she rolls her eyes and thinks it's a parent lecture"
+        }
+      ],
+      "why": "Names the child and the teacher, then asks how Meera felt; the parent opens up about her real worry."
+    },
+    "D2_discovery": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[00:50]",
+          "speaker": "COUNSELLOR",
+          "quote": "That is the core of Little Yogi: we teach the 8 Gunas"
+        }
+      ],
+      "why": "Parent's heritage-values pain is surfaced and reflected using the teacher's note; decision-maker and payer not explicitly confirmed."
+    },
+    "D3_pitch_before_price": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[00:50]",
+          "speaker": "COUNSELLOR",
+          "quote": "never dry rote memorization"
+        },
+        {
+          "ts": "[02:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "Yes, USD 265 all-inclusive for 48 live classes, digital storybooks, and parent reflection guides, backed by our 14-day 100% refund policy."
+        }
+      ],
+      "why": "Framed around character-building with the approved '8 Gunas' language; fee only after schedule is solved."
+    },
+    "D4_objection_handling": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[01:42]",
+          "speaker": "COUNSELLOR",
+          "quote": "Let me check Acharya Aditi's live US batch roster right now so we don't lose that teacher connection..."
+        },
+        {
+          "ts": "[02:20]",
+          "speaker": "PARENT",
+          "quote": "Saturday and Sunday at 9:30 AM PST with Acharya Aditi is literally perfect!"
+        }
+      ],
+      "why": "Checks the live roster, keeps the same teacher and fits the gymnastics schedule in under 20 seconds."
+    },
+    "D5_honest_urgency_close": {
+      "score": 4,
+      "evidence": [
+        {
+          "ts": "[02:42]",
+          "speaker": "PARENT",
+          "quote": "WhatsApp me the Stripe enrollment link and the Sat-Sun 9:30 AM PST batch confirmation right now."
+        },
+        {
+          "ts": "[02:58]",
+          "speaker": "COUNSELLOR",
+          "quote": "Just sent it on your WhatsApp, Neha!"
+        }
+      ],
+      "why": "Sends link and batch confirmation immediately at the parent's request; no explicit first-class date or payment-time check-in."
+    },
+    "D6_listening_balance": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[01:18]",
+          "speaker": "PARENT",
+          "quote": "I am 100% sold on enrolling her in the 48-session track."
+        },
+        {
+          "ts": "[02:00]",
+          "speaker": "COUNSELLOR",
+          "quote": "Acharya Aditi leads a dedicated US West Coast batch on Saturdays and Sundays at 9:30 AM PST."
+        }
+      ],
+      "why": "44% rep talk time; every parent request is answered in the next turn."
+    },
+    "D7_compliance_accuracy": {
+      "score": 5,
+      "evidence": [
+        {
+          "ts": "[02:30]",
+          "speaker": "COUNSELLOR",
+          "quote": "Yes, USD 265 all-inclusive for 48 live classes, digital storybooks, and parent reflection guides, backed by our 14-day 100% refund policy."
+        }
+      ],
+      "why": "Fee and refund match the catalog (USD 265, 14 days); no pressure or outcome claims."
+    }
+  },
+  "anti_gaming": {
+    "checklist_dump_detected": false,
+    "revoked_credit": []
+  },
+  "compliance_flags": [],
+  "unverified_claims": [
+    {
+      "ts": "[02:00]",
+      "claim": "4 kids enrolled in the Sat-Sun 9:30 AM PST batch, all 9 to 10 years old (verify against roster)"
+    },
+    {
+      "ts": "[02:30]",
+      "claim": "digital storybooks and parent reflection guides included"
+    }
+  ],
+  "compliance_gate": "CLEAR",
+  "escalation": {
+    "required": false,
+    "sla_minutes": null,
+    "route_to": null,
+    "reason": null
+  },
+  "post_call_hygiene": [
+    "Payment of USD 265 completed at 11:40:12 PST (order 99404) but CRM stage still 'Payment_Link_Sent' with next_followup_at 2026-11-03 20:00: an uncorrected CRM would send a sales nudge to a paying parent.",
+    "Rep disposition 'Schedule issue / wants weekend batch sent link' is stale: the issue was solved on the call and the parent has paid."
+  ],
+  "headline": "Excellent consultative call: schedule solved live, same teacher kept, parent paid within two hours.",
+  "coaching": {
+    "route": "REP",
+    "focus_skill": "Close the loop after a yes",
+    "note": "Rohan, great call. At [01:42] you checked the live roster and solved the gymnastics clash while Neha was still on the line, and she paid within two hours. The only leak came after the call: the CRM still said 'Payment_Link_Sent' when the money landed, so a sales nudge could have gone to a paid parent. The system now moves the stage for you. Try ending 'yes' calls with: 'Once you pay, I'll confirm Saturday 9:30 with Acharya Aditi.' This week: name the first-class date on every 'yes' call.",
+    "manager_summary": "Benchmark call (clean). Payment-to-CRM sync gap only; fixed by payment-webhook rule."
+  },
+  "raw_score": 93.0,
+  "total_score": 93.0,
+  "capped": false
+}

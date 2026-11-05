@@ -1,0 +1,840 @@
+[
+  {
+    "lead_code": "LEAD-801",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Before 19:30 IST on call day (father is home at 20:30)",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Forwardable proof for the father: answers 'is this just grammar tuition?'",
+        "text": "Hi Divya ma'am, here's the 60-second note for tonight. Ms. Rhea saw Aarav go from a nervous start to a confident 45-second space-rescue story after learning the 3-step 'Superhero Hook' (Beginning, Problem, Rescue). The program trains speaking confidence, not grammar. Max 6 kids per batch. Roadmap attached. Anything else your husband might ask?",
+        "template_vars": [
+          "parent_first_name",
+          "roadmap_pdf"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.learning_gaps_observed",
+          "transcript [01:55] batch max 6",
+          "crm_record.objection_evidence"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Attach Stage Showcase roadmap PDF"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "10:15 IST next day, 45 min before the agreed 11:00 call",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "UTILITY",
+        "purpose": "Call-prep nudge; surfaces the father's questions early",
+        "text": "Good morning ma'am! Quick check before our 11 AM call: did Aarav's dad have any questions after seeing Ms. Rhea's note? I can answer them on the call or right here.",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "transcript [04:15] call booked 11 AM",
+          "transcript [03:32] father's question"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after call if no payment and no reply",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Graceful soft close; offers a joint call, offers to pause",
+        "text": "Hi Divya ma'am, no rush at all. If Aarav's dad would like to hear it directly, I can do a 5-minute call with both of you at a time that suits. Or tell me if you'd prefer I pause my messages. Which is easier?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "crm_record.primary_objection=Spouse_Decision"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Payment link in T1 (link already sent by rep; opened twice)",
+      "Any 'seat will go' language unless the roster API confirms the seat",
+      "Discount (none approved)"
+    ]
+  },
+  {
+    "lead_code": "LEAD-802",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Within 30 min of call end (call ended 19:31 GST, send ~20:00)",
+        "send_local_window": "09:00-20:30 GST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Deliver the curriculum she asked for, plus the answer the rep never gave",
+        "text": "Hi Amina ma'am, as promised, here's the curriculum outline. You asked what Mr. Vikram noticed about Zoya's word problems: she solved two fraction word puzzles on her own with our Bar-Model method (drawing the story as bars) and said 'that was so easy!' A 1-page note on how it works is attached.",
+        "template_vars": [
+          "parent_first_name",
+          "bar_model_note_pdf",
+          "curriculum_pdf"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.learning_gaps_observed",
+          "transcript [02:06] parent's unanswered question"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Attach curriculum PDF and 1-page Bar-Model note (assets must exist)"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "36 h after T1 (Wed 10:00 GST)",
+        "send_local_window": "09:00-20:30 GST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Answers the tuition comparison respectfully; one concrete offer of help",
+        "text": "Hi Amina ma'am, thinking about your comparison with the local tutor: worksheets give practice, while the Bar-Model teaches Zoya to turn a 4-line story into a picture so she stops guessing + or x. Would it help if I asked Mr. Vikram to write 3 lines on how he would tackle her word-problem gap?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "demo_eval.learning_gaps_observed",
+          "transcript [00:50] local tuition AED 350"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "4 days after call (Sat 11:00 GST)",
+        "send_local_window": "09:00-20:30 GST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close; respects her tutor decision and asks about timing",
+        "text": "Hi Amina ma'am, no pressure from our side. If Zoya stays with her local tutor for now, that's completely fine. If word problems are still the hurdle after her exams, Mr. Vikram's note is yours anyway. Shall I check in after her exams, or pause messages?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "transcript [03:08] 'I'll discuss with her local tutor'"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Payment link or 'link expires' wording (she said 'please don't rush me')",
+      "The AED 100 discount as a pay-now lever",
+      "The 96-class AED 2,100 package (not in catalog)",
+      "Any criticism of local tuition"
+    ]
+  },
+  {
+    "lead_code": "LEAD-803",
+    "mode": "STOP",
+    "language": "English",
+    "stop_alert": {
+      "reason": "COMPLIANCE",
+      "notify": [
+        "Head of Sales",
+        "Team Lead (Mumbai)",
+        "Compliance"
+      ],
+      "actions": [
+        "Void order 99403 (Rs. 5,500 custom link) so no payment is taken under false terms",
+        "Set phone DNC on the parent (explicit 'Do not call me again')",
+        "Block all automated cadences for this lead",
+        "Pause new outbound from the rep until the manager review is done",
+        "Manager decides whether to send ONE written correction (draft below); no sales content",
+        "Search WhatsApp chat for the rep's 'written' guarantee and preserve it for review",
+        "Review the rep's other leads (LEAD-808) and recent calls"
+      ]
+    },
+    "touches": [],
+    "manager_draft": {
+      "class": "MANAGER_ONLY",
+      "note": "Only if the Head of Sales approves. Written, one time, no sales content, signed by a manager.",
+      "text": "Dear Mr. Desai, I'm [name], Head of Sales at Bambinos.live. I'm sorry about your call. The guarantee, the Rs. 5,500 price and the refund terms you were given are not our policy, and the payment link has been cancelled. Our actual policy is a 14-day refund (up to 4 classes). We won't contact you again unless you ask. Ms. Simran's feedback on Vihaan is available if you want it."
+    },
+    "never_send": [
+      "Any selling message",
+      "Any phone call",
+      "The rep's payment link",
+      "Any message citing Vihaan's performance unless the manager approves the draft"
+    ]
+  },
+  {
+    "lead_code": "LEAD-804",
+    "mode": "STOP",
+    "language": "English",
+    "stop_alert": {
+      "reason": "PAID",
+      "notify": [
+        "Rohan S***",
+        "Student Success"
+      ],
+      "actions": [
+        "Move CRM stage Payment_Link_Sent -> Enrolled_Paid (order 99404, USD 265, paid 11:40:12 PST)",
+        "Cancel the sales follow-up scheduled 2026-11-03 20:00",
+        "Create onboarding task: confirm first-class date, teacher welcome, parent guide",
+        "Schedule a referral ask for day 14 (separate, non-sales message)"
+      ]
+    },
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Within 5 min of payment webhook",
+        "send_local_window": "09:00-20:30 PST",
+        "class": "AUTO",
+        "template_category": "UTILITY",
+        "purpose": "Transactional onboarding; no selling",
+        "text": "Welcome to Bambinos, Neha! Meera's seat is confirmed: Little Yogi with Acharya Aditi, Saturdays and Sundays at 9:30 AM PST. Her first class is on {{first_class_date}} and the class link will arrive before then. We can't wait to welcome her!",
+        "template_vars": [
+          "first_class_date"
+        ],
+        "grounding": [
+          "order_row.payment_link_status=Paid",
+          "transcript [02:00] batch"
+        ],
+        "stop_if": [
+          "none (single transactional message)"
+        ]
+      }
+    ],
+    "never_send": [
+      "Any payment or discount reminder",
+      "Referral ask before day 14",
+      "Upsell in the first week"
+    ]
+  },
+  {
+    "lead_code": "LEAD-805",
+    "mode": "SEQUENCE",
+    "language": "Hinglish (Roman script)",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "30 min after payment failure (20:45 -> 21:15 IST); payment-recovery utility messages allowed until 22:00",
+        "send_local_window": "until 22:00 IST (utility)",
+        "class": "AUTO",
+        "template_category": "UTILITY",
+        "purpose": "Payment recovery: same amount, simpler method",
+        "text": "Namaste Rajesh sir! Aapka Rs. 5,400 ka payment bank OTP timeout ki wajah se complete nahi ho paya. Naya link: {{fresh_payment_link}} Ek baar ka normal UPI/card payment, mandate nahi. Koi dikkat aaye toh bas reply kar dijiye, main help karungi.",
+        "template_vars": [
+          "fresh_payment_link"
+        ],
+        "grounding": [
+          "order_row.payment_link_status=Payment_Failed",
+          "order_row.gateway_error_reason",
+          "order_row.net_payable_amount=5400"
+        ],
+        "stop_if": [
+          "payment received",
+          "parent replies (hand to human)",
+          "opt-out word"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "Next day 10:30 IST",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Forwardable note for 'mummy' + exam plan",
+        "text": "Namaste sir! Kabir ne PEEL method se 'Should homework be banned' topic par poore 60 seconds bina ek bhi 'umm' ke bola tha. Mummy ko dikhane ke liye 1-minute ka note attach hai. Exam week mein class pause/reschedule ho sakti hai. Mummy ka koi sawal ho toh bataiye?",
+        "template_vars": [
+          "one_minute_note_pdf"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "transcript [01:14] 'mummy bol rahi hain'",
+          "transcript [02:20] exam pause claim"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "VERIFY the 'Exam Pause / Reschedule' feature exists before sending",
+          "Attach 1-minute note"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close tied to his exam date; offers a dated check-in",
+        "text": "Namaste sir, agar exams ke baad start karna better lage toh koi baat nahi. Exams khatam hone par aap jab bolen, main ek chhota call fix kar dungi. Tab tak messages pause kar doon? Kabir ka PEEL wala 60-second speech dobara dekhna ho toh bata dijiye.",
+        "template_vars": [],
+        "grounding": [
+          "transcript [01:14] exams from the 15th",
+          "demo_eval.demo_magic_moment_for_parent"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Auto-debit mandate link (it just failed)",
+      "Extra discount (10% already used)",
+      "PlanetSpark criticism",
+      "'Seats are filling' (not verified)"
+    ]
+  },
+  {
+    "lead_code": "LEAD-806",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "After Academic Ops confirms the micro-batch or 1-on-1 bridge; within 24 h of the call; Team Lead sends",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "MANAGER_ONLY",
+        "template_category": "MARKETING",
+        "purpose": "Acknowledge the mother was right; offer the policy remedy",
+        "text": "Hi Swathi ma'am, I'm [Team Lead] from Bambinos. You were right about Ananya: she loved the Knight and Dragon puzzle with Coach Arvind, and a mixed-age room wasn't ideal for a 6-year-old. We can offer a complimentary 1-on-1 bridge session or an age 5-6 micro-batch. Which feels better?",
+        "template_vars": [
+          "team_lead_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.recommended_batch_type",
+          "policy_row[401].forbidden_compliance_red_flags",
+          "transcript [01:32]"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Academic Ops confirms micro-batch (max 3) or 1-on-1 bridge is available",
+          "Reassign owner from Karan"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "36 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Make the option concrete; no price",
+        "text": "Hi Swathi ma'am, the 1-on-1 bridge is a calm session just for Ananya with a coach, starting from the Knight puzzle she enjoyed. No other kids. Would a weekday evening or a weekend morning suit her better?",
+        "template_vars": [
+          "coach_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.recommended_batch_type"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Bridge-session format confirmed by Ops"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi Swathi ma'am, no pressure at all. When Ananya is ready, the offer of a calm 1-on-1 starter session stands. Shall I check in next week, or pause messages for now?",
+        "template_vars": [],
+        "grounding": [
+          "transcript [02:46] mother's condition"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Any payment link",
+      "Any urgency or deadline",
+      "The 10% discount",
+      "Message from Karan (trust damaged)",
+      "Chess benefit statistics"
+    ]
+  },
+  {
+    "lead_code": "LEAD-807",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Immediately (already overdue); next 09:00 local if outside the window",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "First contact built on the child's win",
+        "text": "Hi {{parent_first_name}}, this is {{rep_first_name}} from Bambinos. {{student_first_name}} scored 5/5 on Ms. Rhea's live Olympiad inference challenge and asked when the regular batch starts. Great sign! Can I call you today at {{slot_1}} or {{slot_2}} with batch timings?",
+        "template_vars": [
+          "parent_first_name",
+          "rep_first_name",
+          "student_first_name",
+          "slot_1",
+          "slot_2"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.child_engagement_score_1_to_5"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "24 h after T1 if no reply",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Connects the teacher's observation to the programme",
+        "text": "Hi {{parent_first_name}}, Ms. Rhea noted that {{student_first_name}} reads widely and has a strong vocabulary. The area to build is structuring persuasive essays and inference answers, which is what the Olympiad & Creative Writing track focuses on. Shall I send the batch timings here?",
+        "template_vars": [
+          "parent_first_name",
+          "student_first_name"
+        ],
+        "grounding": [
+          "demo_eval.skill_strengths_observed",
+          "demo_eval.learning_gaps_observed"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi {{parent_first_name}}, no rush. If the timing isn't right this month, I'm happy to wait. If it helps, I can send two or three batch options to look at at your pace. Shall I?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "crm_record.lead_stage"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Any Olympiad medal or selection promise (policy)",
+      "Discount before the parent asks",
+      "Urgency"
+    ]
+  },
+  {
+    "lead_code": "LEAD-808",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "After the rep's 11/02 call recording is reviewed; reassign owner",
+        "send_local_window": "09:00-20:30 AST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Re-open with the child's win; ask for a time to talk",
+        "text": "Hi {{parent_first_name}}, {{student_first_name}} loved the 'Mystery Box' game in Ms. Simran's class and asked for two extra rounds! Ms. Simran also noted a confident voice and clear pronunciation. When would be a good 10 minutes this week to talk about the right batch?",
+        "template_vars": [
+          "parent_first_name",
+          "student_first_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "demo_eval.skill_strengths_observed"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Do not quote a price: class 108 is missing from the catalog"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "36 h after T1",
+        "send_local_window": "09:00-20:30 AST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Show the small-group benefit in plain words",
+        "text": "Hi {{parent_first_name}}, Ms. Simran suggests the next step is impromptu storytelling and vocabulary, like the Mystery Box game, but every week. In a small group of up to 6, every child gets plenty of turns. Shall I share batch timings that suit Doha?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "demo_eval.learning_gaps_observed",
+          "demo_eval.recommended_batch_type"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 AST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi {{parent_first_name}}, no pressure. If now isn't the right time, tell me when to check back and I'll leave it until then. Or I can pause messages. Whatever is easiest.",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Price (catalog gap)",
+      "Anything referencing the earlier 'Busy / ok' call"
+    ]
+  },
+  {
+    "lead_code": "LEAD-809",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "30 min after the failure (14:15 -> 14:45 GMT)",
+        "send_local_window": "09:00-20:30 GMT (utility until 22:00)",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "UTILITY",
+        "purpose": "Payment recovery with 3DS guidance; same amount",
+        "text": "Hi {{parent_first_name}}, your payment of GBP 210 for {{student_first_name}}'s Maths place didn't go through because the card's extra security check wasn't completed. Fresh link: {{fresh_payment_link}} If your bank app asks you to approve, please tap approve, or try another card. Reply if you'd like a hand.",
+        "template_vars": [
+          "parent_first_name",
+          "student_first_name",
+          "fresh_payment_link"
+        ],
+        "grounding": [
+          "order_row.payment_link_status=Payment_Failed",
+          "order_row.gateway_error_reason",
+          "order_row.net_payable_amount=210"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ],
+        "pre_send_checks": [
+          "Confirm GBP 210 price (GBP missing from catalog) before approving"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "24 h after T1 if unpaid",
+        "send_local_window": "09:00-20:30 GMT",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Re-anchor on the child's win; offer another method",
+        "text": "Hi {{parent_first_name}}, {{student_first_name}} solved the 4-disc Tower of Hanoi challenge on the first attempt in Mr. Vikram's class. A great sign for the Brainiac track. If the card still gives trouble, I can send a link for another payment method. Shall I?",
+        "template_vars": [
+          "parent_first_name",
+          "student_first_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 GMT",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi {{parent_first_name}}, no rush. If it's easier to talk it through, I can call at a time that suits you. Or I'll pause my messages if you'd rather. Which would you prefer?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "A repeat of the same failing link",
+      "Discount",
+      "Urgency"
+    ]
+  },
+  {
+    "lead_code": "LEAD-810",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Immediately (follow-up date 11/01 is stale)",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Re-engage with proof; ask what they wanted to think about",
+        "text": "Hi {{parent_first_name}}, {{student_first_name}} learned the 'thumbs-up b and d' trick in just 5 minutes in Ms. Simran's class and then read 4 sentences aloud. Lovely progress! You'd asked for a call back. What would you like to think over? I can answer here or on a quick 5-minute call.",
+        "template_vars": [
+          "parent_first_name",
+          "student_first_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent",
+          "crm_row.manual_rep_disposition=Call back"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "36 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Link the next learning step to the programme",
+        "text": "Hi {{parent_first_name}}, Ms. Simran noted two things to build next: b/d reversals and long vowel sounds. That is what the Phonics & Early Reading Champions small group (max 6) practises. Would you like the batch timings?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "demo_eval.learning_gaps_observed",
+          "demo_eval.recommended_batch_type"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 IST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi {{parent_first_name}}, no pressure at all. If the timing isn't right, tell me when to check back. I can also pause messages until then.",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Reference to the vague 'cb' note",
+      "Discount",
+      "Urgency"
+    ]
+  },
+  {
+    "lead_code": "LEAD-811",
+    "mode": "STOP",
+    "language": "English",
+    "stop_alert": {
+      "reason": "MERGE",
+      "notify": [
+        "Sales Ops",
+        "Rohan S***",
+        "Pooja M***"
+      ],
+      "actions": [
+        "Merge LEAD-811 into LEAD-801 (same user_id 51001, student_id 78001, mobile)",
+        "Remove Pooja M***'s assignment; Rohan S*** remains the single owner",
+        "Log 'website brochure download 2026-11-03 08:10' as an intent signal on LEAD-801",
+        "No new outreach from this record"
+      ]
+    },
+    "touches": [],
+    "never_send": [
+      "Any message from a second counsellor to this family"
+    ]
+  },
+  {
+    "lead_code": "LEAD-812",
+    "mode": "SEQUENCE",
+    "language": "English",
+    "stop_alert": null,
+    "touches": [
+      {
+        "n": 1,
+        "send_rule": "Immediately (already overdue); next 09:00 Texas time if outside the window",
+        "send_local_window": "09:00-20:30 CST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "First contact built on her question; book a slot",
+        "text": "Hi {{parent_first_name}}, this is {{rep_first_name}} from Bambinos. {{student_first_name}} asked a thoughtful question in Acharya Aditi's class: how Karma Yoga applies to school grades and sport. It was lovely to see you cheering her on! Could we talk for 10 minutes this week about weekend batch options, at a time that suits you?",
+        "template_vars": [
+          "parent_first_name",
+          "rep_first_name",
+          "student_first_name"
+        ],
+        "grounding": [
+          "demo_eval.demo_magic_moment_for_parent"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 2,
+        "send_rule": "24-36 h after T1",
+        "send_local_window": "09:00-20:30 CST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Fit with her schedule; gentle, practical framing",
+        "text": "Hi {{parent_first_name}}, our US weekend small group fits around school and swim. Acharya Aditi keeps it practical: tools for staying steady under pressure, using real examples from school and sport. Want me to send the weekend timings?",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [
+          "demo_eval.recommended_batch_type=US_Weekend_Small_Group",
+          "demo_eval.learning_gaps_observed"
+        ],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      },
+      {
+        "n": 3,
+        "send_rule": "72 h after T1",
+        "send_local_window": "09:00-20:30 CST",
+        "class": "COUNSELLOR_APPROVE",
+        "template_category": "MARKETING",
+        "purpose": "Soft close",
+        "text": "Hi {{parent_first_name}}, no rush at all. If the timing isn't right, tell me when to check back, or I can pause messages. Happy to answer any questions before then.",
+        "template_vars": [
+          "parent_first_name"
+        ],
+        "grounding": [],
+        "stop_if": [
+          "parent replies (hand to human)",
+          "payment received",
+          "opt-out word (STOP/NO)",
+          "compliance hold on the lead"
+        ]
+      }
+    ],
+    "never_send": [
+      "Any statement about the child's anxiety or health",
+      "Price before she asks",
+      "Urgency"
+    ]
+  }
+]

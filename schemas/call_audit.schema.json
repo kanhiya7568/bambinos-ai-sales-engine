@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "call_audit",
+  "type": "object",
+  "required": [
+    "call_id",
+    "lead_code",
+    "scorecard",
+    "anti_gaming",
+    "compliance_flags",
+    "unverified_claims",
+    "compliance_gate",
+    "escalation",
+    "headline"
+  ],
+  "properties": {
+    "call_id": {},
+    "lead_code": {},
+    "counsellor": {},
+    "scorecard": {},
+    "anti_gaming": {},
+    "compliance_flags": {},
+    "unverified_claims": {},
+    "compliance_gate": {},
+    "escalation": {},
+    "post_call_hygiene": {},
+    "headline": {},
+    "coaching": {},
+    "raw_score": {},
+    "total_score": {},
+    "capped": {}
+  }
+}
